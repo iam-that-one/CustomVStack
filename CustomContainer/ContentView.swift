@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        CustomVStack(FG_C: .gray){
+        CustomVStack(){
             Text("Hello")
             Text("world")
+            Button("submit"){
+                
+            }
         }
-        CustomVStack(FG_C: .black, FONT: .system(size: 13, weight: .bold, design: .serif)){
+        CustomVStack(FG_C: .blue, FONT: .system(size: 13, weight: .bold, design: .serif)){
             Text("Hello")
             Text("world")
+            Image(systemName: "person.fill")
         }
     }
 }

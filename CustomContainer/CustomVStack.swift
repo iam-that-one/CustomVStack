@@ -11,7 +11,7 @@ struct CustomVStack<Content: View> : View{
     let FG_C : Color
     let FONT : Font
     let content : Content
-    init(FG_C: Color = .white,FONT : Font = .system(size: 11, weight: .light, design: .default),@ViewBuilder content:()-> Content) {
+    init(FG_C: Color = .red,FONT : Font = .system(size: 11, weight: .light, design: .default),@ViewBuilder content:()-> Content) {
         self.FG_C = FG_C
         self.FONT = FONT
         self.content = content()
@@ -22,9 +22,11 @@ struct CustomVStack<Content: View> : View{
         VStack{
             content
                 .frame(width: 100, height: 50)
+                .padding(10)
                 .background(RoundedRectangle(cornerRadius: 5).fill(Color.yellow))
                 .foregroundColor(FG_C)
                 .font(FONT)
+                .shadow(color: .black,radius: 5)
                 
         }
         }.ignoresSafeArea()
